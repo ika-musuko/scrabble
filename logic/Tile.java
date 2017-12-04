@@ -15,7 +15,7 @@ class Tile {
     }
     
     public String toString() {
-        return Character.toString(this.letter);
+        return Character.toString(this.letter)+this.score;
     }
     
     protected char letter;
