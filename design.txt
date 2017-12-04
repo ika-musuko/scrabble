@@ -1,0 +1,6 @@
+scrabble
+----------
+- populate the letter stack
+- each player picks 7 letters from the letter stack
+- each player takes a turn until no more words can be played
+- winner is the player with the highest score
