@@ -1,6 +1,18 @@
 scrabble
 ----------
-- populate the letter stack
-- each player picks 7 letters from the letter stack
-- each player takes a turn until no more words can be played
-- winner is the player with the highest score
+populate the letter stack
+
+each player picks 7 letters from the letter stack
+
+loop until no more words can be played:
+    each player takes a turn
+        player chooses tiles from his own tray and tries to form a word
+            place each tile onto board: placeTile(tile, row, col)
+            get all newly formed words
+            verify all newly formed words are actually words
+                for each played tile, get score of tile, keeping in mind any bonus squares (such as double or triple letter/word)
+                if the 
+                if there are any invalid words, give back played tiles and force player to try again (place each...)
+            
+
+winner is the player with the highest score
