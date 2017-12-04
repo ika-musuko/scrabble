@@ -25,12 +25,10 @@ class Tile {
 class BlankTile extends Tile {
     public BlankTile() {
         super(" ", 0);
-        this.played = false;
     }
     
     public void setLetter(char letter) {
         this.letter = letter;
     }
     
-    private boolean played;
 }
