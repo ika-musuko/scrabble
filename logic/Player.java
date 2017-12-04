@@ -3,9 +3,12 @@ import java.util.*;
 
 public interface Player implements Comparable<Player> {
     public int compareTo(Player other);
-    public boolean fillTray(LetterStack ls);
-    public boolean popLetters(Move move);
+    
+    public LetterStack exchangeLetters(LetterStack ls, List<Tile> toExchange);
+    public LetterStack fillTray(LetterStack ls);
+    public LetterStack popLetters(Move move);
     public boolean trayEmpty();
+    
     public int getScore();
     
     public void addScore
