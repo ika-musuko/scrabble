@@ -1,15 +1,22 @@
 import java.util.*;
 
 public class ScrabbleClient {
+    
+    class ConsolePlayer extends ConcretePlayer {
+        public Move makeMove() {
+            
+        }
+    }
+    
     public static void main(String[] args) {
-        Board board = new Board("data/default.board");
-        LetterStack letterStack = new LetterStack("data/default.tiles");
-        WordList wordList = new WordList("data/dictionary.txt");
+        Board board = new Board("../data/default.board");
+        LetterStack letterStack = new LetterStack("../data/default.tiles");
+        WordList wordList = new WordList("../data/dictionary.txt");
               
         // initialize all the players with their own tiles from the letter stack
         List<Player> players = new ArrayList<>();
         for (int i = 0; i < 4; ++i) {
-            players.add(new Player(letterStack));
+            players.add(new ConsolePlayer());
         }
         
         // start the game
