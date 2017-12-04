@@ -1,7 +1,7 @@
 import java.lang.*;
 import java.util.*;
 
-public class Player {
+public class Player implements Comparable<Player>{
     public Player(String name) {
         
     }
@@ -17,4 +17,11 @@ public class Player {
     public boolean placeTile(int tileIndex, int r, int c) {
         
     }
+    
+    public int compareTo(Player other) {
+        
+    }
+    
+    private int score;
+    private Tray tray;
 }
