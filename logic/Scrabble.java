@@ -60,14 +60,14 @@ public class Scrabble implements Runnable {
         
         // wait for a move
         do {
-            move = this.currentPlayer.makeMove();
+            move = this.currentPlayer.makeMove(this.board);
             try {
                 Thread.sleep(100);
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
+                System.out.println("InterruptedException while waiting for a move...");
                 e.printStackTrace();
             }    
-        } while (move == null || !this.board.validMove(move)); // make sure the move is valid
+        } while (move == null); // make sure the move is valid
         
         // perform move (and increase player's score accordingly)
         if(!this.currentPlayer.popLetters(move))

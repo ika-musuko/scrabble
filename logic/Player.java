@@ -13,14 +13,13 @@ public interface Player implements Comparable<Player> {
     
     public void addScore
     public Move getMove();
-    public Move makeMove();
+    public Move makeMove(Board b);
 }
 
 public abstract ConcretePlayer implements Player {
-    public ConcretePlayer(String name, LetterStack ls) {
+    public ConcretePlayer(String name) {
         this.name = name;
         this.score = 0;
-        this.fillTray(ls);
     }
  
     // compare scores
@@ -64,10 +63,10 @@ public abstract ConcretePlayer implements Player {
     }
     
     // implement how to set a move depending on frontend
-    public abstract Move makeMove();
+    public abstract Move makeMove(Board b);
     
-    private int score;
-    private Tray tray;
-    private Move move;
-    private String name; 
+    protected int score;
+    protected Tray tray;
+    protected Move move;
+    protected String name; 
 }

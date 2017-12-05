@@ -1,3 +1,10 @@
+random links
+-----------------
+http://www.cse.yorku.ca/~oz/hash.html
+
+
+
+
 scrabble
 ----------
 populate the letter stack
